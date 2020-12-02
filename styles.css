@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.headerdropdown{
+ border:none;
+ outline:none;
+ margin-left: 85px;
+ margin-top: 14px;
+}
+.headersearch{
+    width: 202px;
+    margin-left: 13rem;
+    margin-top: -33px;
+}
+.signup{
+   list-style-type: none;
+   float:left;
+   margin-left: 48px;
+   margin-top: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.image{
+    height: 52px;
+    margin-left: 72px;
+    margin-top: 6px;
+
+}

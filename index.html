@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle bg-white text-primary headerdropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <b>Courses</b>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Math</a>
+              <a class="dropdown-item" href="#">Science</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+          <input class="form-control mr-sm-2 headersearch" type="search" placeholder="Search" aria-label="Search">
+         
+      </div>
+      <div class="col-md-4">
+          <img class="image" src="data:image/png;base64,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" alt="logo">
+      </div>
+      <div class="col-md-4">
+          <ul style="list-style-type: none;">
+              <li class="signup text-primary"><b>Donate</b></li>
+              <li class="signup text-primary"><b>Login</b></li>
+              <li class="signup text-primary"><b>Signup</b></li>
+          </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="container">
+            <section>
+    
+            </section>
+        </div>
+        </section>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> 
+</body>
+</html>
