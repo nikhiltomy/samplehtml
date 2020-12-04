@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khan Academy</title>
+    <link rel= "icon" href="https://media.glassdoor.com/sqls/452278/khan-academy-squarelogo-1534439244132.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle bg-white text-primary headerdropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <b>Courses</b>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Math</a>
+              <a class="dropdown-item" href="#">Science</a>
+              <a class="dropdown-item" href="#">Computing</a>
+            </div>
+          </div>
+          <input class="form-control mr-sm-2 headersearch" type="search" placeholder="Search" aria-label="Search">
+         
+      </div>
+      <div class="col-12 col-md-4">
+          <img class="image" src="data:image/png;base64,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" alt="logo">
+      </div>
+      <div class="col-12 col-md-4 ">
+        <nav class="navbar navbar-expand-lg navbar-light mt-2">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link text-info" href="#"><strong> Donate</strong><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-info" href="#"><strong> Login </strong><span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link text-info" href="#"><strong> Signup </strong><span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+       </div>
+      </header>
+  </div>
+    <hr>
+  <section>
+    <div class="container-fluid">
+     <div class="row">
+            <div class="col-6">
+              <img class="img-fluid" src="Screenshot_20201203_073704.png" alt="logo" style="margin-left: 80px;">
+            </div>
+            <div class="col-6">
+              <h1 class="quote">For every student,<br>Every classroom.<br>Real results.</h1>
+              <p><b>We’re a nonprofit with the mission to provide a free, world-class<br>education for anyone, anywhere.</b></p>
+              <button type="button" class="btn btn-primary">Learners</button>
+              <button type="button" class="btn btn-primary">Teachers</button>
+              <button type="button" class="btn btn-primary">Parents</button>
+            </div>  
+    </div>
+    </div>
+  </section>
+<section class="section bg-light secondsection">
+  <h2 style="text-align: center;"><strong> Why Khan Academy works </strong></h2>
+  <div class="container secondsectioncontainer">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="card cardlayout bg-light cardborder">
+          <img style="height: 200px;width:300px;" class="card-img-top img-fluid" src="card1.png" alt="Card image cap">
+          <div class="card-body">
+            <p style="text-align: center;"><strong>Personalized learning</strong></p>
+            <p class="card-text">Students practice at their own pace, first filling in gaps in their understanding and then accelerating their learning..</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card cardlayout bg-light cardborder">
+          <img style="height: 200px;width:300px;" class="card-img-top img-fluid" src="card2.png" alt="Card image cap">
+          <div class="card-body">
+            <h6 style="text-align:center;"><strong>Trusted content</strong></h6>
+            <p class="card-text">Created by experts, Khan Academy’s library of trusted, standards-aligned practice and lessons covers math K-12 through early college, grammar, science</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card cardlayout bg-light cardborder">
+          <img style="height: 200px;width:300px;" class="card-img-top img-fluid" src="card3.png" alt="Card image cap">
+          <div class="card-body">
+            <p style="text-align: center;"><strong>Tools to empower teachers</strong></p>
+            <p class="card-text">With Khan Academy, teachers can identify gaps in their students’ understanding, tailor instruction, and meet the needs of every student.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <img class="children img-fluid" src="children.png" alt="children picture">
+      </div>
+      <div class="col-12 col-sm-6">
+      <quote class="text-secondary">Teacher</quote>
+      <br>
+        <h2><strong> “I’m finally able to truly<br> differentiate my <br> classroom. This has <br> been priceless for my <br> students’ engagement.”</strong></h2>
+        <p class="text-secondary">UDAYA LAKSHMI PALAPALA / Middle school Coordinator / Hyderabad,<br> Telangana</p>
+        <p>We empower teachers to support their entire classroom. <br> 90% of US teachers who have used Khan Academy have <br> found us effective.</p>
+        <sub class="text-secondary">SOURCE: 2018 ConStat U.S. Online Education Customer Survey</sub><br>
+        <button type="button" class="btn btn-primary mt-4">Teachers, Starts Here</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-12 col-sm-6 pt-4">
+      <quote class="text-secondary">LEARNERS AND STUDENTS</quote>
+      <br>
+        <h2><strong>You can learn <br> anything.</strong></h2>
+        <p>Build a deep, solid understanding in math, science,<br> grammar, history, SAT®, and more.</p>
+        <button type="button" class="btn btn-primary mt-4">Learners, Starts Here</button>
+      </div>
+      <div class="col-12 col-sm-6">
+        <img class="img-fluid children" src="animation.png" alt="animated picture">
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="row">
+    <div class="col-12 bg-light">
+      <p class="userquote">“When I was a child, I used to fear mathematics. But <br> now, I am in love with mathematics because of Khan <br> Academy.”</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8 bg-light">
+     <p style="text-align: right;">ANJALIGurugram, <br> Haryana</p>
+    </div>
+    <div class="col-4 bg-light" >
+    <img src="userimg.png" alt="user image" style="width: 150px; height: 150px;">
+    </div>
+  </div>
+</section>
+
+<section>
+    <div class="row mt-4">
+      <div class="col-12 col-sm-6 mt-4">
+        <img class="children img-fluid" src="children2.png" alt="children picture">
+      </div>
+      <div class="col-12 col-sm-6 mt-4 pt-5">
+      <quote class="text-secondary">TOGETHER WE CAN MAKE A DIFFERENCE</quote>
+      <br>
+        <h2><strong> Every child deserves <br> the chance to learn.</strong></h2>
+        <p>Across the globe, 617 million children are missing basic <br> math and reading skills. We’re a nonprofit delivering the <br> education they need, and we need your help. You can <br> change the course of a child’s life.</p>
+        <button type="button" class="btn btn-primary mt-4">Give them the chance</button>
+      </div>
+    </div>
+</section>
+
+<section class="join" style="height:50rem;">
+  <h2 style="text-align: center;"><strong> Join Khan Academy</strong></h2>
+  <div class="row">
+   <div class="col-12 text-center">
+    <button style="width: 250px;" type="button" class="btn btn-primary mt-4 p-3 btn-lg">Learners</button><br>
+    <button style="width: 250px;" type="button" class="btn btn-primary mt-4 p-3 btn-lg">Teachers</button><br>
+    <button style="width: 250px;" type="button" class="btn btn-primary mt-4 p-3 btn-lg">Parents</button><br>
+    <button style="width: 250px;" type="button" class="btn btn-primary mt-4 p-3 btn-lg">Give today</button>
+  </div>
+  </div>
+</section>
+
+<section class="bg-light">
+  <div class="container">
+  <h2 style="text-align: center;"><strong> Key Supporters</strong></h2>
+  <div class="row mt-5">
+    <div class="col-12 col-md-3 p-3">
+      <img class="logo" src="https://cdn.kastatic.org/images/supporters-logos/bank-of-america-gray@2x.png">
+    </div>
+    <div class="col-12 col-md-3 p-3">
+      <img class="logo" src="https://cdn.kastatic.org/images/supporters-logos/college-board-gray@2x.png">
+    </div>
+    <div class="col-12 col-md-3 p-3">
+      <img class="logo" src="https://cdn.kastatic.org/images/supporters-logos/ann-and-john-doerr-gray@2x.png">
+    </div>
+    <div class="col-12 col-md-3 p-3">
+      <img class="logo" src="https://cdn.kastatic.org/images/supporters-logos/gates-foundation-gray@2x.png">
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-12 col-md-3 p-3">
+      <img class="logo" src="https://cdn.kastatic.org/images/supporters-logos/lemann-foundation-gray@2x.png">
+    </div>
+    <div class="col-12 col-md-3 p-3">
+      <img class="logo" src="https://cdn.kastatic.org/images/supporters-logos/carlos-rodriguez-pastor-gray@2x.png">
+    </div>
+    <div class="col-12 col-md-3 p-3">
+      <img class="logo" src="https://cdn.kastatic.org/images/supporters-logos/tata-trusts-gray@2x.png">
+    </div>
+    <div class="col-12 col-md-3 p-3">
+      <img class="logo" src="https://cdn.kastatic.org/images/supporters-logos/valhalla-gray@2x.png">
+    </div>
+  </div>
+  <h2 style="text-align: center;margin-top: 50px;"><strong> Supporters of our COVID-19 response Bank of America</strong></h2>
+  <br>
+  <br>
+  <div class="row mb-5">
+    <div class="col-12 col-md-3 p-3">
+      <img class="logo" src="https://cdn.kastatic.org/images/supporters-logos/lemann-foundation-gray@2x.png">
+    </div>
+    <div class="col-12 col-md-3 p-3">
+      <img class="logo" src="https://cdn.kastatic.org/images/supporters-logos/att-gray@2x.png">
+    </div>
+    <div class="col-12 col-md-3 p-3">
+      <img class="logo" src="https://cdn.kastatic.org/images/supporters-logos/google-gray@2x.png">
+    </div>
+    <div class="col-12 col-md-3 p-3">
+      <img class="logo" src="https://cdn.kastatic.org/images/supporters-logos/novartis-gray@2x.png">
+    </div>
+  </div>
+  <hr>
+  <br>
+  <br>
+</div>
+</section>
+<footer style="background-color: #0a2a66;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-3">
+        <p class="text-secondary mt-4">Our mission is to provide a free, world-class education to anyone, anywhere.Khan Academy is a 501(c)(3) nonprofit organization. Donate or volunteer today!</P>
+      </div>
+      <div class="col-6 col-md-3 mt-3">
+       <ul style="list-style-type: none;">
+         <li>About</li>
+         <li>News</li>
+         <li>Impact</li>
+         <li>Our Team</li>
+         <li>Our interns</li>
+         <li>Our contents specialists</li>
+         <li>Our leadership</li>
+         <li>Our Supporters</li>
+         <li>Our Team</li>
+         <li></li>
+       </ul>
+      </div>
+      <div class="col-6 col-md-3 mt-3">
+        <ul style="list-style-type: none;">
+          <li>About</li>
+          <li>News</li>
+          <li>Impact</li>
+          <li>Our Team</li>
+          <li>Our interns</li>
+          <li>Our contents specialists</li>
+          <li>Our leadership</li>
+          <li>Our Supporters</li>
+          <li>Our Team</li>
+          <li></li>
+ 
+        </ul>
+      </div>
+      <div class="col-6 col-md-3 mt-3">
+        <ul style="list-style-type: none;">
+          <li>About</li>
+          <li>News</li>
+          <li>Impact</li>
+          <li>Our Team</li>
+          <li>Our interns</li>
+          <li>Our contents specialists</li>
+          <li>Our leadership</li>
+          <li>Our Supporters</li>
+          <li>Our Team</li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row text-white">
+      <div class="col-12 col-md-12">
+      <quote><span class="text-secondary">Language</span>  English</quote><br>
+      <quote><span class="text-secondary">Country</span>    US</quote>
+      </div>
+    </div>
+    <hr style="color: white;">
+  </div>
+  <div class="row">
+    <div class="col-6">
+    <p class="text-secondary">© 2020 Khan Academy  <span class="text-white ml-2"> Terms and use </span>  <span class="text-white ml-2"> privacy and policy </span></p>
+    </div>
+    <div class="col-6">
+      <i style="font-size:24px" class="fa text-white">&#xf230;</i>
+      <i class="fa fa-instagram text-white" aria-hidden="true"></i>
+      <i class="fa fa-twitter text-white" aria-hidden="true"></i>
+    </div>
+  </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> 
+</body>
+</html>
+
+
+

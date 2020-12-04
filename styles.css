@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.headerdropdown{
+ border:none;
+ outline:none;
+ margin-left: 85px;
+ margin-top: 14px;
+}
+.headersearch{
+    width: 202px;
+    margin-left: 13rem;
+    margin-top: -33px;
+}
+.signup{
+   list-style-type: none;
+   float:left;
+   margin-left: 48px;
+   margin-top: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.image{
+    height: 52px;
+    margin-left: 72px;
+    margin-top: 6px;
+
+}
+.quote{
+    margin-top: 47px;
+    font-weight: bolder;
+}
+button{
+    margin-top: 3px;
+}
+.secondsection{
+   height:70rem;
+}
+.secondsectioncontainer{
+    margin-top: 150px;
+}
+.cardborder{
+    border: none;
+}
+.cardtext{
+    text-align: center;
+}
+.children{
+    width: 40rem;
+    height:43rem;
+}
+.userquote{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 123px;
+}
+#username{
+    margin-top: 53px;
+    margin-left: 47rem;
+}
+.join{
+   width: 100%;
+   margin: 0;
+   background-image: url('last_chance_pattern0.jpg');
+   background-position: center center;
+   background-repeat: no-repeat;
+}
+.buttonset{
+    width: 20rem;
+    margin-left: 33rem;
+    margin-top: 10rem;
+}
+.logo{
+    padding-left: 30px;
+    padding-right: 26px;
+    height: 20px;
+    width: 200px;
+}
+li{
+    color:white;
+}
