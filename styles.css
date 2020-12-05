@@ -19,6 +19,7 @@ body{
    margin-left: 48px;
    margin-top: 20px;
    font-family: Arial, Helvetica, sans-serif;
+   color: #1865f2 ;
 }
 .image{
     height: 52px;
@@ -28,13 +29,10 @@ body{
 }
 .quote{
     margin-top: 47px;
-    font-weight: bolder;
+    font-size: 100%;
 }
 button{
     margin-top: 3px;
-}
-.secondsection{
-   height:70rem;
 }
 .secondsectioncontainer{
     margin-top: 150px;
@@ -78,4 +76,54 @@ button{
 }
 li{
     color:white;
+}
+.footerfonts{
+    font-size: x-small;
+
+}
+.fontsection1{
+    /* font-family: 'Source Serif Pro', serif; */
+    font-size: 53px;
+}
+.fontsection2{
+    /* font-family: 'Source Serif Pro', serif; */
+    font-size: 44px;
+}
+.fontsection3{
+    /* font-family: 'Source Serif Pro', serif; */
+    font-size: 53px;
+}
+h2,h1,h3{
+   font-family: 'Source Serif Pro', 'Noto Serif', serif !important;
+}
+.line-60{
+  margin-top: 0;
+}
+.signup-43{
+    margin-right: 97px;
+}
+._eib2kdk {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    color: #21242c !important;
+    display: block !important;
+    font-family: 'Source Serif Pro', 'Noto Serif', serif !important;
+    font-size: 23px !important;
+    font-weight: 400 !important;
+    line-height: 30px !important;
+    letter-spacing: -0.1px !important;
+    margin: 0 0 20px 0 !important;
+}
+._1jhgniwy {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    color: #21242c !important;
+    display: block !important;
+    font-family: Lato, 'Noto Sans', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 26px !important;
+    letter-spacing: -0.1px !important;
 }
