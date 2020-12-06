@@ -44,8 +44,16 @@ button{
     text-align: center;
 }
 .children{
-    width: 40rem;
-    height:43rem;
+    width: 43rem;
+    height:35rem;
+}
+#children_button{
+    height: 4em;
+    width: 13em;
+}
+#animated{
+    width: 43rem;
+    height:34rem;
 }
 .userquote{
     font-size: 2rem;
@@ -78,8 +86,11 @@ li{
     color:white;
 }
 .footerfonts{
-    font-size: x-small;
+    font-size: 12px;
 
+}
+.footer_line{
+    margin-left: 10em;
 }
 .fontsection1{
     /* font-family: 'Source Serif Pro', serif; */
@@ -92,6 +103,10 @@ li{
 .fontsection3{
     /* font-family: 'Source Serif Pro', serif; */
     font-size: 53px;
+}
+._children-171{
+    padding-top: 5em;
+    padding-left: 5em;
 }
 h2,h1,h3{
    font-family: 'Source Serif Pro', 'Noto Serif', serif !important;
